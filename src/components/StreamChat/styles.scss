@@ -4,6 +4,8 @@
   height: 100%;
 
   .stream-chat__embedded {
+    display: block;
+    height: calc(100% - 64px);
     flex-grow: 1;
   }
 }

@@ -1,8 +1,10 @@
 // https://codepen.io/tysongach/pen/jQryRj
-$one-row: 100vh;
-$two-rows: repeat(2, calc(100vh / 2));
-$three-rows: repeat(3, calc(100vh / 3));
-$four-rows: repeat(4, calc(100vh / 4));
+
+$screensize: calc(100vh - 64px);
+$one-row: $screensize;
+$two-rows: repeat(2, calc($screensize / 2));
+$three-rows: repeat(3, calc($screensize / 3));
+$four-rows: repeat(4, calc($screensize / 4));
 
 $players: (
   "1": "A",
@@ -26,7 +28,7 @@ $players: (
   }
 
   &.grid--1 {
-    grid-template-rows: var(--one-row);
+    grid-template-rows: $one-row;
     grid-template-areas: "A";
 
     @media (orientation: portrait) {
@@ -35,11 +37,11 @@ $players: (
   }
 
   &.grid--2 {
-    grid-template-rows: var(--one-row);
+    grid-template-rows: $one-row;
     grid-template-areas: "A B";
 
     @media (orientation: portrait) {
-      grid-template-rows: var(--two-rows);
+      grid-template-rows: $two-rows;
       grid-template-areas:
         "A"
         "B";
@@ -47,13 +49,13 @@ $players: (
   }
 
   &.grid--3 {
-    grid-template-rows: var(--two-rows);
+    grid-template-rows: $two-rows;
     grid-template-areas:
       "A B"
       "C C";
 
     @media (orientation: portrait) {
-      grid-template-rows: var(--three-rows);
+      grid-template-rows: $three-rows;
       grid-template-areas:
         "A"
         "B"
@@ -62,20 +64,20 @@ $players: (
   }
 
   &.grid--4 {
-    grid-template-rows: var(--two-rows);
+    grid-template-rows: $two-rows;
     grid-template-areas:
       "A B"
       "C D";
   }
 
   &.grid--5 {
-    grid-template-rows: var(--two-rows);
+    grid-template-rows: $two-rows;
     grid-template-areas:
       "A A B B C C"
       "D D D E E E";
 
     @media (orientation: portrait) {
-      grid-template-rows: var(--three-rows);
+      grid-template-rows: $three-rows;
       grid-template-areas:
         "A A B B"
         "C C D D"
@@ -84,13 +86,13 @@ $players: (
   }
 
   &.grid--6 {
-    grid-template-rows: var(--two-rows);
+    grid-template-rows: $two-rows;
     grid-template-areas:
       "A B C"
       "D E F";
 
     @media (orientation: portrait) {
-      grid-template-rows: var(--three-rows);
+      grid-template-rows: $three-rows;
       grid-template-areas:
         "A B"
         "C D"
@@ -99,13 +101,13 @@ $players: (
   }
 
   &.grid--7 {
-    grid-template-rows: var(--two-rows);
+    grid-template-rows: $two-rows;
     grid-template-areas:
       "A A A B B B C C C D D D"
       "E E E E F F F F G G G G";
 
     @media (orientation: portrait) {
-      grid-template-rows: var(--three-rows);
+      grid-template-rows: $three-rows;
       grid-template-areas:
         "A A A B B B"
         "C C C D D D"
@@ -114,13 +116,13 @@ $players: (
   }
 
   &.grid--8 {
-    grid-template-rows: var(--two-rows);
+    grid-template-rows: $two-rows;
     grid-template-areas:
       "A B C D"
       "E F G H";
 
     @media (orientation: portrait) {
-      grid-template-rows: var(--four-rows);
+      grid-template-rows: $four-rows;
       grid-template-areas:
         "A B"
         "C D"
