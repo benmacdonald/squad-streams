@@ -9,7 +9,12 @@ import "./index.scss";
 import { ReduxState } from "./redux/reducer";
 import { configureStore } from "./redux/store";
 import * as serviceWorker from "./serviceWorker";
+import { setupFirebase } from "./utils/firebase";
 
+// Setup Firebase
+setupFirebase();
+
+// Configure Redux Store
 const store: Store<ReduxState> = configureStore();
 
 function Index() {
