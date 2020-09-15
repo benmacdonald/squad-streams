@@ -1,0 +1,11 @@
+.app {
+  text-align: center;
+  height: 0;
+  min-height: 100vh;
+  background-color: #1d1d1d;
+
+  .layout {
+    height: 0;
+    min-height: calc(100vh - 68px);
+  }
+}
