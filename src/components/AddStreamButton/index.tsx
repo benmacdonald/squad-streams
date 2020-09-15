@@ -10,7 +10,6 @@ const AddStreamButton: React.FC<{}> = (props) => {
     <>
       <Tooltip title="Add Stream">
         <IconButton
-          edge="start"
           color="inherit"
           aria-label="add-stream"
           onClick={() => setShowModal(!showModal)}

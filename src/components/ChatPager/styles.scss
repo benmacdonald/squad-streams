@@ -1,0 +1,11 @@
+.chat-pager {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  border-left: 0.5px solid #171717;
+
+  .chat-pager__paper {
+    position: absolute;
+    width: 340px;
+  }
+}

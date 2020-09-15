@@ -1,6 +1,7 @@
 import { AppBar, Toolbar } from "@material-ui/core";
 import React from "react";
 import AddStreamButton from "../AddStreamButton";
+import ToggleChatButton from "../ToggleChatButton";
 import "./styles.scss";
 
 const Navbar: React.FC<{}> = (props) => {
@@ -8,6 +9,7 @@ const Navbar: React.FC<{}> = (props) => {
     <AppBar position="static">
       <Toolbar className="navbar">
         <AddStreamButton />
+        <ToggleChatButton />
       </Toolbar>
     </AppBar>
   );
