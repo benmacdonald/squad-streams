@@ -2,9 +2,9 @@
 
 $screensize: calc(100vh - 64px);
 $one-row: $screensize;
-$two-rows: repeat(2, calc($screensize / 2));
-$three-rows: repeat(3, calc($screensize / 3));
-$four-rows: repeat(4, calc($screensize / 4));
+$two-rows: repeat(2, calc((100vh - 64px) / 2));
+$three-rows: repeat(3, calc((100vh - 64px) / 3));
+$four-rows: repeat(4, calc((100vh - 64px) / 4));
 
 $players: (
   "1": "A",
