@@ -10,7 +10,7 @@ const TwitchPlayer: React.FC<Props> = (props) => {
   return (
     <iframe
       title={channelName}
-      src={`https://player.twitch.tv/?channel=${channelName}&parent=localhost&autoplay=false`}
+      src={`https://player.twitch.tv/?channel=${channelName}&parent=localhost&parent=squad-streams.web.app&autoplay=false`}
       frameBorder="0"
       scrolling="no"
       allowFullScreen={true}
