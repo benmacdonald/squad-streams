@@ -1,8 +1,9 @@
 import { Button, TextField } from "@material-ui/core";
 import React, { useState } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { ReduxState } from "../../redux/reducer";
 import { addStream } from "../../services/streams/actions";
-import { StreamSource } from "../../services/streams/models";
+import { Stream, StreamSource } from "../../services/streams/models";
 import {
   getTwitchChannelFromUrl,
   getYoutubeVideoIdFromUrl,
@@ -15,6 +16,9 @@ const AddStreamModal: React.FC<OwnModalProps> = (props) => {
   const { onClose } = props;
 
   // Redux State
+  const streamMap = useSelector<ReduxState, Map<string, Stream>>(
+    (state) => state.stream.streams
+  );
   const dispatch = useDispatch();
   // Own State
   const [url, setUrl] = useState<string>("");
@@ -52,6 +56,7 @@ const AddStreamModal: React.FC<OwnModalProps> = (props) => {
       variant="contained"
       color="primary"
       onClick={addStreamToRedux}
+      disabled={streamMap.size >= 8}
     >
       Add
     </Button>,
